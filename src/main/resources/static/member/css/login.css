@@ -1,0 +1,108 @@
+/* a 태그 내 글자 설정 */
+a {
+    text-decoration: none;
+    color:black;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+/* 아이디, 비밀번호 설정 */
+.id, .pwd {
+    border: none;
+    border-bottom: 1px solid #CCC;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 12px;
+    height: 30px;
+    left: 33.5%;
+    margin: -25px 0 0 -100px;
+    position: relative;
+    width: 298px;
+}
+
+/* placeholder 글자 색 설정 */
+input::-webkit-input-placeholder {
+    color: #AAA;
+}
+
+/* 로그인 설정 */
+.btn-login {
+    height: 40px;
+    width: 300px;
+    border: 0;
+    color: #fff;
+    border: 1px solid #000;
+    background: black;
+    margin-bottom: 15px;
+}
+
+/* 회원가입 설정 */
+.btn-join {
+    height: 40px;
+    width: 300px;
+    border: 0;
+    color: #000000;
+    border: 1px solid black;
+    background: white;
+}
+
+/* 체크박스 크기 설정 */
+input[type="checkbox"] {
+    width: 11px;
+    height: 11px;
+}
+
+/* 체크 박스 설정 */
+.save-id {
+    margin: 16px 0;
+}
+
+/* 아이디 저장 글자 설정 */
+div>label {
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+/* 아이디 찾기, 비밀번호 찾기 글자 설정 */
+.loss-id {
+    font-size: 12px;
+    padding-left: 90px;
+}
+
+.loss-pwd {
+    font-size: 12px;
+}
+
+/* sns 로그인 이미지 조정 */
+.login-naver {
+    width: 50px;
+    position: relative;
+    top: 12px;
+    left: 10px;
+}
+
+.login-kakao {
+    width: 50px;
+    position: relative;
+    top: 12px;
+    left: 32px;
+}
+
+.login-google {
+    width: 50px;
+    position: relative;
+    top: 12px;
+    left: 54px;
+}
+
+.login-apple {
+    width: 50px;
+    position: relative;
+    top: 12px;
+    left: 77px;
+}

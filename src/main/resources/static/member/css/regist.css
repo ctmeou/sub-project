@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+/* placeholder 글자 색 설정 */
+input::-webkit-input-placeholder {
+    color: #AAA;
+}
+
+/* 아이디, 비밀번호, 비밀번호 확인, 이름, 이메일, 주소 입력 칸 너비, 높이 설정 */
+#id, #pwd1, .pwd2, .name, .address1,
+.address2, .email {
+    width: 550px;
+    height: 25px;
+    outline: none;
+}
+
+/* 여백 설정 */
+#id, #pwd1, .pwd2, .name, .joinAddress,
+.tel, .phone, .sms-yn, .regist-email, .email-yn {
+    margin-top: 20px;
+}
+.address1, .address2 {
+    margin-top: 10px;
+}
+.check-agree {
+    margin-top: 50px;
+}
+
+/* 우편번호, 연락처 입력 칸 설정 */
+#zipCode, .tel1, .tel2, .tel3, .phone1, .phone2, .phone3 {
+    height: 25px;
+    width: 170.5px;
+    outline: none;
+}
+
+/* 입력 칸 맞춤 설정 */
+#id, .email {
+    margin-left: 60.2px;
+}
+#pwd1 {
+    margin-left: 46.3px;
+}
+.pwd2 {
+    margin-left: 14.5px;
+}
+.name, #zipCode {
+    margin-left: 74px;
+}
+.address1, .address2 {
+    margin-left: 116px;
+}
+.tel1 {
+    margin-left: 56.5px;
+    height: 31px;
+}
+.phone1 {
+    margin-left: 46.5px;
+    height: 31px;
+}
+.sms-yn, .email-yn {
+    display : flex;
+}
+.s-yn, .e-yn {
+    margin-top: 10px;
+    margin-left: 45.5px;
+}
+
+/* 약관 설정 */
+.police, .private, .promotion {
+    overflow-y: scroll;
+    width: 650px;
+    height: 100px;
+    border: 0.5px solid black;
+    font-size: 12px;
+}
+
+/* 회원가입 설정 */
+#joinBtn {
+    height: 40px;
+    width: 650px;
+    border: 0;
+    color: #fff;
+    border: 1px solid #000;
+    background: black;
+    margin-bottom: 15px;
+}
+
+/* radio 색상 설정 */
+[type="radio"] {
+    accent-color: black;
+}
+
+/* 주소 검색 버튼 설정 */
+.adr {
+    height: 31px;
+    margin-left: 10px;
+}
+
+/* 연락처 스핀 버튼 설정 */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* 회원가입 버튼 가운데 정렬 */
+button#joinBtn {
+    display: block;
+    margin: 0 auto;
+}
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+}
+
+/*.check-agree::after{content: "";display: block;clear: both;}*/
