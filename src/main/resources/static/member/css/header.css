@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+/* 헤더 아래 콘텐츠 추가시 최상단 속성
+* 아래와 같이 적용 해주세요~!
+ margin-top : 64px;
+ position: inherit;
+*/
+
+html {
+    background: white;
+    font-size: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: fit-content;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#root {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 1920px;
+    height: 64px;
+    -webkit-box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 90%);
+}
+
+
+.upper-buttons-justify {
+    margin: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-logo {
+    margin-right: 400px;
+}
+
+.middle-side-buttons {
+    font-size: 16px;
+    display: inline-flex;
+    height: 64px;
+    gap: 48px;
+    align-items: center;
+    text-align: center;
+    margin-right: 400px;
+}
+
+/* 드롭다운 메뉴*/
+
+.sub_a {
+    font-weight: bolder;
+}
+
+.add-sub {
+    display: none;
+}
+
+.add-sub {
+    transform: translate(-50px, 44px);
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+}
+
+.add-sub li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.add-sub li a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.add-sub li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* ---- 가방 ---- */
+
+.add-sub-bags {
+    display: none;
+}
+
+.add-sub-bags {
+    transform: translate(-20px, 44px);
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+}
+
+.add-sub-bags li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.add-sub-bags li a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.add-sub-bags li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* ---- 커뮤니티 ---- */
+
+.add-sub-com {
+    display: none;
+}
+
+.add-sub-com {
+    transform: translate(-20px, 44px);
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+}
+
+.add-sub-com li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.add-sub-com li a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.add-sub-com li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* myshop */
+
+.add-sub-my {
+    display: none;
+}
+
+.add-sub-my {
+    transform: translate(-30px, 15px);
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+}
+
+.add-sub-my li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.add-sub-my li a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.add-sub-my li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* -------------------------------------- */
+
+.right-buttons-justify {
+    display: inline-flex;
+    gap: 32px;
+}
+
+.right-buttons-justify img {
+    width: 23px;
+    height: 23px;
+    object-fit: cover;
+}
+
+.button-style {
+    transform: scale(1)
+    rotate(0deg);
+    opacity: 1;
+}
+
+/* ----- 검색창 ----- */
+
+.slide-search {
+    display: block;
+    width: 100%;
+    height: 300px;
+    position: fixed;
+    z-index: 2000;
+    top: -350px;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: left;
+    -webkit-box-shadow: 0 15px 15px 1px rgba(0,0,0,0.1);
+}
+
+.slide-search .closebtn {
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.closebtn a {
+    text-decoration: none;
+    color: black;
+}
+
+.slide-search .search-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 88px 0px 120px 0px;
+}
+
+.slide-search fieldset {
+    position: relative;
+    width: 700px;
+    height: 50px;
+    margin: 0 auto 0;
+    border: 0;
+    border-bottom: 2px solid #111;
+}
+
+.slide-search .inputTypeText {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    color: #111;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+.slide-search .btn-src {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 12px;
+    right: 0px;
+}
+
+.slide-search .hot-keyword {
+    margin-top: 32px;
+    line-height: 44px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 30px;
+}
+
+.slide-search .search-title {
+    font-size: 16px;
+    float: left;
+    margin-right: 16px;
+}
+
+.slide-search .search-tag a {
+    display: block;
+    float: left;
+    color: #888;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0px 10px;
+    border: 1px solid #e5e5e5;
+    margin-right: 8px;
+    border-radius: 8px;
+    margin-top: 3px;
+}

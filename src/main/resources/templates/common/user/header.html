@@ -1,0 +1,328 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap" rel="stylesheet">-->
+<!--    <link href="/member/css/header.css" rel="stylesheet" type="text/css">-->
+<!--    <title>header</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="root">-->
+
+<!--    <div class="upper-buttons-justify">-->
+<!--        <div class="main-logo">-->
+<!--            <a href=#>-->
+<!--                <img src="user/images/main_logo.png">-->
+<!--            </a>-->
+<!--        </div>-->
+
+<!--        <ul class="middle-side-buttons">-->
+
+<!--            <li><a href=#>BEST</a></li>-->
+
+<!--            <li class="add-cate">-->
+<!--                <a class="cate" id="carrier" href=#>캐리어</a>-->
+<!--                <ul class="add-sub">-->
+<!--                    <li class="sub_a"><a href=#>하드</a></li>-->
+<!--                    <li><a href=#>기내 (21형 이하)</a></li>-->
+<!--                    <li><a href=#>중형 (22~26형)</a></li>-->
+<!--                    <li><a href=#>대형 (27형 이상)</a></li>-->
+<!--                    <br>-->
+<!--                    <li class="sub_a"><a href=#>소프트</a></li>-->
+<!--                    <li><a href=#>기내 (21형 이하)</a></li>-->
+<!--                    <li><a href=#>중형 (22~26형)</a></li>-->
+<!--                    <li><a href=#>대형 (27형 이상)</a></li>-->
+<!--                </ul>-->
+<!--            </li>-->
+
+<!--            <li class="add-cate">-->
+<!--                <a class="cate" id="bags" href="#">가방</a>-->
+<!--                <ul class="add-sub-bags">-->
+<!--                    <li class="sub_a"><a href="#">배낭</a></li>-->
+<!--                    <li><a href="#">여행 배낭</a></li>-->
+<!--                    <li><a href="#">배낭 용품</a></li>-->
+<!--                    <li><a href="#">백팩</a></li>-->
+<!--                    <br>-->
+<!--                    <li class="sub_a"><a href="#">보조가방</a></li>-->
+<!--                    <li><a href="#">접이식 | 폴딩백</a></li>-->
+<!--                    <li><a href="#">보스턴 | 더플백</a></li>-->
+<!--                    <li><a href="#">크로스 | 숄더백</a></li>-->
+<!--                    <li><a href="#">도난방지백</a></li>-->
+<!--                    <li><a href="#">기타 백</a></li>-->
+<!--                </ul>-->
+<!--            </li>-->
+
+<!--            <li><a href=#>여행용품</a></li>-->
+<!--            <li><a href=#>이벤트</a></li>-->
+
+<!--            <li class="add-cate">-->
+<!--                <a class="cate" id="community" href=#>커뮤니티</a>-->
+<!--                <ul class="add-sub-com">-->
+<!--                    <li class="sub_a"><a href="#">게시판</a></li>-->
+<!--                    <li><a href="#">ABOUT US</a></li>-->
+<!--                    <li><a href="#">NOTICE</a></li>-->
+<!--                    <li><a href="#">FAQ</a></li>-->
+<!--                    <li><a href="#">Q&A</a></li>-->
+<!--                </ul>-->
+<!--            </li>-->
+
+<!--        </ul>-->
+
+<!--        <div class="right-buttons-justify">-->
+
+<!--            <div class="store">-->
+<!--                <a href=#>-->
+<!--                    <img src="/member/images/top_store.png">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class="myshop">-->
+<!--                <a class="cate" id="myshop" href=#>-->
+<!--                    <img src="/member/images/top_myshop.png">-->
+<!--                </a>-->
+<!--                <ul class="add-sub-my">-->
+<!--                    <li><a href="#">로그인</a></li>-->
+<!--                    <li><a href="#">회원가입</a></li>-->
+<!--                    <li><a href="#">주문조회</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <div class="cart">-->
+<!--                <a href=#>-->
+<!--                    <img src="/member/images/top_cart.png">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div id="searchBtn" class="search" onclick="slideDown()">-->
+<!--                <a href=#>-->
+<!--                    <img src="/member/images/top_search.png">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div id="keyword-search" class="slide-search">-->
+<!--        <a href="#" id="closeBtn" class="closebtn" onclick="closeSlide()">-->
+<!--            <img src="/member/images/search_close.png">-->
+<!--        </a>-->
+
+<!--        <div class="search-inner">-->
+<!--            <form id="searchForm" action="/search.html" method="get" target="_self">-->
+<!--                <fieldset title="검색어를 입력해주세요.">-->
+<!--                    <input id="keyword" name="keyword" class="inputTypeText" placeholder="검색어를 입력하세요."-->
+<!--                           value="검색어를 입력하세요." type="text">-->
+<!--                    <input type="image" src="/member/images/top_search.png" class="btn-src" alt="검색이미지"-->
+<!--                           onclick="submitSearch(this); return false">-->
+<!--                </fieldset>-->
+<!--            </form>-->
+
+<!--            <div class="hot-keyword">-->
+<!--                <div class="search-title">인기 검색어</div>-->
+<!--                <div class="search-tag">-->
+<!--                    <a href="#" class="tag">#캐리어</a>-->
+<!--                    <a href="#" class="tag">#캐리어커버</a>-->
+<!--                    <a href="#" class="tag">#캐리어벨트</a>-->
+<!--                    <a href="#" class="tag">#와이어</a>-->
+<!--                    <a href="#" class="tag">#배낭</a>-->
+<!--                    <a href="#" class="tag">#도난방지</a>-->
+<!--                    <a href="#" class="tag">#복대</a>-->
+<!--                    <a href="#" class="tag">#네임택</a>-->
+<!--                    <a href="#" class="tag">#여권케이스</a>-->
+<!--                    <a href="#" class="tag">#</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <script>-->
+<!--        const searchBtn = document.getElementById("searchBtn");-->
+<!--        const slide = document.getElementById("keyword-search");-->
+<!--        let currentY = -350;-->
+<!--        const targetY = 0;-->
+<!--        let isAnimating = false;-->
+
+<!--        searchBtn.addEventListener("click", () => {-->
+<!--            if (!isAnimating) {-->
+<!--                animateElement();-->
+<!--            }-->
+<!--        });-->
+
+<!--        function animateElement() {-->
+<!--            isAnimating = true;-->
+<!--            function animate() {-->
+<!--                currentY +=20;-->
+
+<!--                slide.style.top = currentY + "px";-->
+
+<!--                if (currentY < targetY) {-->
+<!--                    requestAnimationFrame(animate);-->
+<!--                } else {-->
+<!--                    slide.style.top = 0 + "px";-->
+<!--                    isAnimating = false;-->
+<!--                }-->
+<!--            }-->
+<!--            animate();-->
+<!--        }-->
+
+<!--        function closeSlide() {-->
+<!--            let before = parseInt(getComputedStyle(slide).top);-->
+<!--            const after = -350-->
+<!--            isAnimating = true;-->
+
+<!--            function animate() {-->
+<!--                before -= 20;-->
+
+<!--                slide.style.top = before + "px";-->
+
+<!--                if (before > after) {-->
+<!--                    requestAnimationFrame(animate);-->
+<!--                } else {-->
+<!--                    slide.style.top = -350 + "px";-->
+<!--                    isAnimating = false;-->
+<!--                }-->
+<!--            }-->
+<!--            animate();-->
+<!--        }-->
+<!--    </script>-->
+
+
+<!--</div>-->
+
+
+
+
+<!--<script>-->
+<!--    const addCate = document.getElementById("carrier");-->
+<!--    const addSubMenus = document.querySelectorAll(".add-sub");-->
+
+<!--    let timeoutId;-->
+
+<!--    addCate.addEventListener("mouseenter", () => {-->
+<!--        clearTimeout(timeoutId);-->
+<!--        addSubMenus.forEach((submenu) => {-->
+<!--            submenu.style.display = "block";-->
+<!--        });-->
+<!--    });-->
+
+<!--    addCate.addEventListener("mouseleave", () => {-->
+<!--        timeoutId = setTimeout(() => {-->
+<!--            addSubMenus.forEach((submenu) => {-->
+<!--                submenu.style.display = "none";-->
+<!--            });-->
+<!--        }, 300);-->
+<!--    });-->
+
+<!--    addSubMenus.forEach((submenu) => {-->
+<!--        submenu.addEventListener("mouseenter", () => {-->
+<!--            clearTimeout(timeoutId);-->
+<!--            submenu.style.display = "block";-->
+<!--        });-->
+
+<!--        submenu.addEventListener("mouseleave", () => {-->
+<!--            timeoutId = setTimeout(() => {-->
+<!--                submenu.style.display = "none";-->
+<!--            }, 300);-->
+<!--        });-->
+<!--    });-->
+
+<!--    /* bags */-->
+<!--    const addBags = document.getElementById("bags");-->
+<!--    const addSubBags = document.querySelectorAll(".add-sub-bags");-->
+
+<!--    addBags.addEventListener("mouseenter", () => {-->
+<!--        clearTimeout(timeoutId);-->
+<!--        addSubBags.forEach((submenu) => {-->
+<!--            submenu.style.display = "block";-->
+<!--        });-->
+<!--    });-->
+
+<!--    addBags.addEventListener("mouseleave", () => {-->
+<!--        timeoutId = setTimeout(() => {-->
+<!--            addSubBags.forEach((submenu) => {-->
+<!--                submenu.style.display = "none";-->
+<!--            });-->
+<!--        }, 300);-->
+<!--    });-->
+
+<!--    addSubBags.forEach((submenu) => {-->
+<!--        submenu.addEventListener("mouseenter", () => {-->
+<!--            clearTimeout(timeoutId);-->
+<!--            submenu.style.display = "block";-->
+<!--        });-->
+
+<!--        submenu.addEventListener("mouseleave", () => {-->
+<!--            timeoutId = setTimeout(() => {-->
+<!--                submenu.style.display = "none";-->
+<!--            }, 300);-->
+<!--        });-->
+<!--    });-->
+
+<!--    /* community */-->
+<!--    const addCom = document.getElementById("community");-->
+<!--    const addSubCom = document.querySelectorAll(".add-sub-com");-->
+
+<!--    addCom.addEventListener("mouseenter", () => {-->
+<!--        clearTimeout(timeoutId);-->
+<!--        addSubCom.forEach((submenu) => {-->
+<!--            submenu.style.display = "block";-->
+<!--        });-->
+<!--    });-->
+
+<!--    addCom.addEventListener("mouseleave", () => {-->
+<!--        timeoutId = setTimeout(() => {-->
+<!--            addSubCom.forEach((submenu) => {-->
+<!--                submenu.style.display = "none";-->
+<!--            });-->
+<!--        }, 300);-->
+<!--    });-->
+
+<!--    addSubCom.forEach((submenu) => {-->
+<!--        submenu.addEventListener("mouseenter", () => {-->
+<!--            clearTimeout(timeoutId);-->
+<!--            submenu.style.display = "block";-->
+<!--        });-->
+
+<!--        submenu.addEventListener("mouseleave", () => {-->
+<!--            timeoutId = setTimeout(() => {-->
+<!--                submenu.style.display = "none";-->
+<!--            }, 300);-->
+<!--        });-->
+<!--    });-->
+
+<!--    /* myshop */-->
+<!--    const addMy = document.getElementById("myshop");-->
+<!--    const addSubMy = document.querySelectorAll(".add-sub-my");-->
+
+<!--    addMy.addEventListener("mouseenter", () => {-->
+<!--        clearTimeout(timeoutId);-->
+<!--        addSubMy.forEach((submenu) => {-->
+<!--            submenu.style.display = "block";-->
+<!--        });-->
+<!--    });-->
+
+<!--    addMy.addEventListener("mouseleave", () => {-->
+<!--        timeoutId = setTimeout(() => {-->
+<!--            addSubMy.forEach((submenu) => {-->
+<!--                submenu.style.display = "none";-->
+<!--            });-->
+<!--        }, 300);-->
+<!--    });-->
+
+<!--    addSubMy.forEach((submenu) => {-->
+<!--        submenu.addEventListener("mouseenter", () => {-->
+<!--            clearTimeout(timeoutId);-->
+<!--            submenu.style.display = "block";-->
+<!--        });-->
+
+<!--        submenu.addEventListener("mouseleave", () => {-->
+<!--            timeoutId = setTimeout(() => {-->
+<!--                submenu.style.display = "none";-->
+<!--            }, 300);-->
+<!--        });-->
+<!--    });-->
+
+
+
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->

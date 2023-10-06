@@ -9,10 +9,7 @@ import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Slf4j
@@ -36,20 +33,6 @@ public class MemberController {
     @GetMapping("/regist")
     public void reigstPage() {}
 
-    // 아이디 중복 체크
-    @PostMapping("/idDupCheck")
-    public ResponseEntity<String> checkDuplication(@RequestBody MemberDTO member) {
-
-        log.info("Request Check ID : {}", member.getMemberId());
-        String result = "사용 가능한 아이디입니다.";
-
-        if (memberService.selectMemberById(member.getMemberId())) {
-            result = "이미 사용 중인 아이디입니다.";
-        }
-
-        return ResponseEntity.ok(result);
-
-    }
 
     // 회원가입
     @PostMapping("/regist")

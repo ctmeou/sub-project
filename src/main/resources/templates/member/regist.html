@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <script type="text/javascript" src="/member/js/regist.js"></script>
     <link rel="stylesheet" type="text/css" href="/member/css/regist.css">
-<!--    이메일 자동완성을 위해 추가-->
+    <!-- 이메일 자동완성을 위해 추가-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- 주소 API -->
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
-<!--<body>-->
+<body>
+<div th:replace="common/user.header.html"></div>
 <div>
     <h2 align="center">REGISTER</h2>
     <form id="regist" method="post">
@@ -20,7 +21,7 @@
                 <label for="id">아이디 *</label>
                 <input class="id" id="id" type="text" required>
             </li>
-            <li class="regist-pwd">
+            <li class="pwd">
                 <label for="pwd1">비밀번호 *</label>
                 <input id="pwd1" type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{10,16}$"
                        placeholder="(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자 ~ 16자)" required><br>
@@ -28,7 +29,7 @@
                     <p>
                         * 비밀번호 입력 조건<br>
                         - 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자 ~ 16자<br>
-                        - 입력 가능 특수문자: ~ ! @ # $ % ^ ( ) * _ - = { } [ ] | ; : < > , . ? /<br>
+                        - 입력 가능 특수문자: ~ ` ! @ # $ % ^ ( ) * _ - = { } [ ] | ; : < > , . ? /<br>
                         - 공백 입력 불가능<br>
                         - 연속된 문자, 숫자 사용 불가능<br>
                         - 동일한 문자, 숫자를 반복해서 사용 불가능<br>
@@ -36,7 +37,7 @@
                     </p>
                 </div>
                 <label for="pwd2">비밀번호 확인 *</label>
-                <input class="pwd2" type="password" required>
+                <input id="pwd2" type="password" required>
             </li>
             <li class="regist-name">
                 <label for="name">이름 *</label>
@@ -46,8 +47,8 @@
                 <label for="zipCode">주소 *</label>
                 <input id="zipCode" type="text" readonly>
                 <button id="searchZipCode" type="button">주소 검색</button><br>
-                <input class="address1" id="address1" type="text" readonly><br>
-                <input class="address2" id="address2" type="text">
+                <input class="address" id="address1" type="text" readonly><br>
+                <input class="address" id="address2" type="text">
             </li>
             <li class="tel">
                 <label>일반전화</label>

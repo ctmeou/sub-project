@@ -32,4 +32,7 @@ public class MemberService {
         return  result != null;
 
     }
+
+    // 아이디 중복 체크
+
 }
