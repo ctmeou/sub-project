@@ -2,8 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
-    <script type="text/javascript" src="/member/js/regist.js"></script>
-    <link rel="stylesheet" type="text/css" href="/member/css/regist.css">
+    <script type="text/javascript" src="/user/js/regist.js"></script>
+    <link rel="stylesheet" type="text/css" href="/user/css/regist.css">
     <!-- 이메일 자동완성을 위해 추가-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -12,32 +12,34 @@
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
 <body>
-<div th:replace="common/user.header.html"></div>
+
 <div>
     <h2 align="center">REGISTER</h2>
-    <form id="regist" method="post">
+    <form action="/user/regist" method="post">
         <ul>
             <li class="regist-id">
                 <label for="id">아이디 *</label>
-                <input class="id" id="id" type="text" required>
+                <input class="id" id="id" type="text" maxlength="16" required>
+                <input type="button" value="중복확인" id="idCheck">
             </li>
             <li class="pwd">
                 <label for="pwd1">비밀번호 *</label>
-                <input id="pwd1" type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{10,16}$"
-                       placeholder="(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자 ~ 16자)" required><br>
-                <div class="password-info" style="display: none;">
+                <input id="pwd1" type="password"
+                       placeholder="(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자 ~ 16자)" maxlength="16" required><br>
+                <div id="pwdError"></div>
+                <div id="pwdMessage" style="display: none;">
                     <p>
-                        * 비밀번호 입력 조건<br>
+                        <strong>* 비밀번호 입력 조건</strong><br>
                         - 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자 ~ 16자<br>
                         - 입력 가능 특수문자: ~ ` ! @ # $ % ^ ( ) * _ - = { } [ ] | ; : < > , . ? /<br>
                         - 공백 입력 불가능<br>
                         - 연속된 문자, 숫자 사용 불가능<br>
                         - 동일한 문자, 숫자를 반복해서 사용 불가능<br>
-                        - 아이디 포함 불가능
                     </p>
                 </div>
                 <label for="pwd2">비밀번호 확인 *</label>
                 <input id="pwd2" type="password" required>
+                <div id="pwdError2"></div>
             </li>
             <li class="regist-name">
                 <label for="name">이름 *</label>
@@ -121,11 +123,11 @@
             </li>
         </ul>
 
-        <form action="/" method="POST" id="form-wrap">
+        <form action="/" method="POST" id="checkbox-all">
             <ul class="check-agree">
                 <li>
-                    <input type="checkbox" id="checkAll" onclick="checkAll();">
-                    <label>이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</label><br><br>
+                    <input type="checkbox" id="checkAll">
+                    <label for="checkAll">이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</label><br><br>
                 </li>
                 <li>
                     <label>[필수] 이용약관 동의</label>
@@ -161,9 +163,9 @@
                 </li>
                 <li>
                     <label>이용약관에 동의하십니까? </label>
-                    <input type="checkbox" name="cbox" id="policy1"><label>동의함</label><br><br>
+                    <input type="checkbox" id="policy1" class="requiredCheck" required><label for="policy1">동의함</label><br><br>
                 </li>
-                <li>
+                <li class="required-check">
                     <label>[필수] 개인정보 수집 및 이용 동의</label><br>
                     <div class="private">
                     <p>1. 개인정보 수집목적 및 이용목적</p>
@@ -194,9 +196,9 @@
                 </li>
                 <li>
                     <label>개인정보 수집 및 이용에 동의하십니까? </label>
-                    <input type="checkbox" name="cbox" id="private1"><label>동의함</label><br><br>
+                    <input type="checkbox" id="private1" class="requiredCheck" required><label for="private1">동의함</label><br><br>
                 </li>
-                <li>
+                <li class="required-check">
                     <label>[선택] 쇼핑정보 수신 동의</label>
                     <div class="promotion">
                         <p>할인쿠폰 및 혜택, 이벤트, 신상품 소식 등 쇼핑몰에서 제공하는 유익한 쇼핑정보를 SMS나 이메일로 받아보실 수 있습니다.</p>
@@ -206,11 +208,11 @@
                 </li>
                 <li>
                     <label>SMS 수신을 동의하십니까? </label>
-                    <input type="checkbox" name="cbox" id="promotion1"><label>동의함</label><br>
+                    <input type="checkbox" id="promotion1" class="optionalCheck"><label for="promotion1">동의함</label><br>
                 </li>
                 <li>
                     <label>이메일 수신을 동의하십니까? </label>
-                    <input type="checkbox" name="cbox" id="promotion2"><label>동의함</label><br><br><br>
+                    <input type="checkbox" id="promotion2" class="optionalCheck"><label for="promotion2">동의함</label><br><br><br>
                 </li>
             </ul>
         </form>
@@ -220,10 +222,8 @@
     </form>
 </div>
 
-<!-- 주소 API -->
-<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
-
+<!-- 주소 API -->
     const $searchZipCode = document.getElementById("searchZipCode");
 
     $searchZipCode.onclick = function () {
@@ -238,17 +238,5 @@
 
 </script>
 
-
-
-<!-- 이용 약관 전체 동의 -->
-<!--<script>-->
-<!--    function checkAll() {-->
-<!--        if($("#checkAll").is(':checked')) {-->
-<!--            $("input[name=cbox]").prop("checked", true);-->
-<!--        } else {-->
-<!--            $("input[name=cbox]").prop("checked", false);-->
-<!--        }-->
-<!--    }-->
-<!--</script>-->
 </body>
 </html>

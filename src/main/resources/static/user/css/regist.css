@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1920px;
+    /*width: 1920px;*/
 }
 
 input{
@@ -19,7 +19,7 @@ input::-webkit-input-placeholder {
     color: #AAA;
 }
 
-/* 아이디, 비밀번호, 비밀번호 확인, 이름, 이메일, 주소 입력 칸 너비, 높이 설정 */
+/* 입력 칸 너비, 높이 설정(아이디, 비밀번호, 비밀번호 확인, 이름, 이메일, 주소) */
 #id, #pwd1, #pwd2, .name, .address, .email {
     width: 550px;
     height: 25px;
@@ -96,13 +96,56 @@ input::-webkit-input-placeholder {
     margin-bottom: 15px;
 }
 
+/*transform : 선택 요소의 위치 조정*/
+/* 비밀번호 안내 문구 설정 */
+#pwdMessage {
+    transform: translate(10px, -205px);
+    position: absolute;
+    background: white;
+    z-index: 1;
+    margin-left: 120px;
+    margin-top: 10px;
+    width: 400px;
+    border: 1px solid black;
+}
+#pwdMessage:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black transparent;
+    border-bottom: 0;
+    margin-left: -5px;
+    margin-bottom: -5px;
+}
+#pwdMessage p {
+    display: inline-block;
+    color: #767676;
+    font-size: 12px;
+    line-height: 1.6em;
+    padding-left: 10px;
+}
+#pwdMessage strong {
+    color: #da5b5b;
+}
+
+/* 비밀번호 에러 문구 */
+#pwdError, #pwdError2 {
+    font-size: 12px;
+    color: red;
+    margin-top: 10px;
+    margin-left: 120px;
+}
+
 /* radio 색상 설정 */
 [type="radio"] {
     accent-color: black;
 }
 
 /* 주소 검색 버튼 설정 */
-#searchZipCode {
+#searchZipCode, #idCheck {
     height: 31px;
     margin-left: 10px;
 }
@@ -126,5 +169,6 @@ button#joinBtn {
     padding: 10px;
     z-index: 1;
 }
+
 
 /*.check-agree::after{content: "";display: block;clear: both;}*/
